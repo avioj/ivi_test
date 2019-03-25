@@ -1,0 +1,2 @@
+class CharNotFoundException(Exception):
+    pass
