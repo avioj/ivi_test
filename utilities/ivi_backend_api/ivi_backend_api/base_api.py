@@ -29,7 +29,7 @@ class BaseApi:
     def _send(self, url, callback, method, **kwargs):
         log_msg = 'Sending {} request to {}'.format(method, url)
 
-        log_msg = '{} and headers {} and auth {}'.format(log_msg, kwargs.get('headers'), kwargs.get("auth"))
+        log_msg = '{} and auth {}'.format(log_msg, self.session.auth)
         json_data = kwargs.get("json")
         if json_data is not None:
             log_msg = "{} and body {}".format(log_msg, json_data)
